@@ -1,6 +1,6 @@
-#include <TFT_eSPI.h> // Graphics and font library for ST7735 driver chip
+#include <TFT_eSPI.h>
 
-TFT_eSPI tft = TFT_eSPI();  // Invoke library, pins defined in User_Setup.h
+TFT_eSPI tft = TFT_eSPI();
 #define WAIT 1500
 #define SCREEN_WIDTH 128
 #define SCREEN_HEIGHT 160
@@ -22,8 +22,8 @@ void moveSadFaceRandomly() {
 void moveSadFaceEnd() {
   tft.fillScreen(TFT_BLACK);
   tft.drawString("      uWu <3 ", 0, 0, 2);
-  int x = random(0, SCREEN_WIDTH/5); // Adjust the width of the ":(" text
-  int y = random(SCREEN_HEIGHT - 10, SCREEN_HEIGHT); // Adjust the height of the ":(" text
+  int x = random(0, SCREEN_WIDTH/5);
+  int y = random(SCREEN_HEIGHT - 10, SCREEN_HEIGHT);
   tft.drawString(":(", x, y, 2);
   delay(WAIT);
 }
